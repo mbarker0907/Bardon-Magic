@@ -1,4 +1,4 @@
-/* Reset and Global Styles */
+/* Global Styles */
 body {
     font-family: 'Cinzel', serif;
     background-color: #1e2130;
@@ -18,35 +18,34 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #1e2130;
+    background-color: #120a38; /* deep cosmic blue */
 }
 
 /* SVG Visualization */
 #elementsCircle {
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     position: relative;
 }
 
-/* Element Information */
+/* Element Information Container */
 #elementInfoContainer {
     margin-top: 30px;
     width: 70%;
     display: block;
 }
 
+/* Hidden Element Info */
 .elementInfo {
     color: white;
     text-align: center;
     font-size: 18px;
     max-width: 500px;
     margin-bottom: 20px;
+    display: none;
 }
 
-.elementInfo.hidden {
-    display: none; 
-}
-
+/* Specific Styling for visible info */
 .elementInfo h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -68,15 +67,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-    width: 400px;
-    height: 250px;
-    background-color: red;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    width: 300px;
+    height: 250px;       
+    opacity: .5;
     pointer-events: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    z-index: 0;
+    transition: all 0.6s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,11 +80,11 @@ body {
 
 #popupContent {
     color: #1e2130;
+    font-weight: bolder;
     font-size: 18px;
     text-align: center;
 }
 
-.showPopup {
-    opacity: 1;
-    pointer-events: auto;
-}
+
+
+
