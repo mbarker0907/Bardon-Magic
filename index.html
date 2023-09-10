@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Elements</title>
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- SVG Visualization -->
+        <svg id="elementsCircle" viewBox="0 0 500 500">
+            <defs>
+                <!-- Filters for SVG effects -->
+                <!-- Offset & Blur Filter -->
+                <filter id="f1" x="0" y="0" width="150%" height="150%">
+                    <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
+                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                </filter>
+                
+                <!-- Glow Filter -->
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                    <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- Popup for Element Information -->
+        <div id="popup">
+            <div id="popupContent"></div>
+        </div>
+
+        <!-- Hidden containers for element details -->
+        <section id="elementInfoContainer">
+            <!-- Akasha Information -->
+            <article id="AkashaInfo" class="elementInfo hidden">
+                <p>Information about Akasha</p>
+            </article>
+            
+            <!-- Fire Information -->
+            <article id="FireInfo" class="elementInfo hidden">
+                <p>Information about Fire</p>
+            </article>
+            
+            <!-- Water Information -->
+            <article id="WaterInfo" class="elementInfo hidden">
+                <p>Information about Water</p>
+            </article>
+            
+            <!-- Air Information -->
+            <article id="AirInfo" class="elementInfo hidden">
+                <p>Information about Air</p>
+            </article>
+            
+            <!-- Earth Information -->
+            <article id="EarthInfo" class="elementInfo hidden">
+                <p>Information about Earth</p>
+            </article>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
