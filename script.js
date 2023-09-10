@@ -1,7 +1,7 @@
 const svgNamespace = "http://www.w3.org/2000/svg";
 const center = { x: 250, y: 250 };
 const smallCircleRadius = 40;
-const radius = 225 - smallCircleRadius;
+const radius = 200 - smallCircleRadius;
 
 // Elements data
 const elements = [

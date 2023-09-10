@@ -12,13 +12,17 @@ body {
 /* Main Container */
 #container {
     width: 100%;
-    height: 100vh;
+    max-width: 1200px;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #120a38; /* deep cosmic blue */
+    background-color: #120a38;
+    color: white;  /* Set the default text color to white for all container's children */
 }
 
 /* SVG Visualization */
@@ -37,7 +41,6 @@ body {
 
 /* Hidden Element Info */
 .elementInfo {
-    color: white;
     text-align: center;
     font-size: 18px;
     max-width: 500px;
@@ -45,10 +48,9 @@ body {
     display: none;
 }
 
-/* Specific Styling for visible info */
-.elementInfo h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.elementInfo h2, #container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .elementInfo ul {
@@ -68,7 +70,7 @@ body {
     transform: translate(-50%, -50%);
     padding: 30px;
     width: 300px;
-    height: 250px;       
+    height: 250px;
     opacity: .5;
     pointer-events: none;
     z-index: 0;
@@ -85,17 +87,115 @@ body {
     text-align: center;
 }
 
-
-/* Page Title Styles */
-#pageTitle {
-    font-size: 32px;           /* Adjust font size as per your preference */
-    color: white;              /* Color of the title text */
-    text-align: center;        /* Center align the title text */
-    padding: 20px;             /* Add some padding to space out the title */
-    background-color: #120a38; /* Background color matching your container's background */
-    border-bottom: 2px solid #8842d5; /* Optional: a subtle bottom border for visual separation */
-    margin-bottom: 20px;      /* Add some space below the title */
-    width: 100%;              /* Make it full width */
+/* Navigation Styles */
+nav {
+    background-color: #1e2130;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #120a38;
+    border-bottom: 2px solid white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e2130;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+}
+
+/* Biography Page Styles */
+#bardonImage img {
+    max-width: 200px; 
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+#bardonBio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify; 
+}
+/* Step Section Styles */
+.step {
+    background-color: #1e2130; /* Same deep cosmic blue background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.step h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.step p {
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Active Nav Link Style */
+nav a.active {
+    color: #120a38; /* Deep cosmic blue text for the active link */
+    background-color: white;
+}
+/* Exercise Section Styles */
+.exercise {
+    background-color: #1e2130; /* Deep cosmic blue background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.exercise h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.exercise ul {
+    padding-left: 20px; /* Indentation for the list */
+}
+
+.exercise li {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+}

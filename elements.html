@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Elements</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<header id="pageTitle">
+    Classical Elements Visualization
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="bardon.html">Biography</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="theory.html">Theory</a></li>
+            <li><a href="steps.html" class="active">Steps of Initiation</a></li>
+        <!-- You can add other page links here as your web app grows -->
+    </ul>
+</nav>
+
+<body>
+
+      <div id="container">
+        <!-- SVG Visualization of Classical Elements -->
+        <svg id="elementsCircle" viewBox="0 0 500 500">
+            <defs>
+                <!-- Filters for SVG effects -->
+                <pattern id="goldTexture" patternUnits="userSpaceOnUse" width="6" height="6">
+                    <image href="path_to_texture_image.png" x="0" y="0" width="6" height="6" />
+                </pattern>
+
+                <radialGradient id="goldGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style="stop-color:#ffcc00; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#996515; stop-opacity:1" />
+                </radialGradient>
+
+                <!-- Offset & Blur Filter -->
+                <filter id="f1" x="0" y="0" width="150%" height="150%">
+                    <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
+                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                </filter>
+
+                <!-- Glow Filter for Special Highlights -->
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                    <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- Popup for Element Information -->
+        <div id="popup">
+            <div id="popupContent"></div>
+        </div>
+
+        <!-- Hidden Containers for Element Details -->
+        <section id="elementInfoContainer">
+
+           <!-- Akasha (Ether) Information -->
+<article id="AkashaInfo" class="elementInfo hidden">
+    <p>
+        <strong>--- Akasha (Ether) ---</strong><br>
+        The quintessence or spiritual force behind the physical world.<br>
+        Governs space and the processes of transformation.<br>
+        Represents the principle of consciousness.
+    </p>
+</article>
+
+<!-- Fire Information -->
+<article id="FireInfo" class="elementInfo hidden">
+    <p>
+        <strong>--- Fire ---</strong><br>
+        Element of willpower and transformation.<br>
+        Represents warmth and expansion.<br>
+        Governs passion, courage, and enthusiasm.
+    </p>
+</article>
+
+<!-- Water Information -->
+<article id="WaterInfo" class="elementInfo hidden">
+    <p>
+        <strong>--- Water ---</strong><br>
+        Element of emotion, intuition, and fluidity.<br>
+        Represents coldness and contraction.<br>
+        Governs feelings, love, and devotion.
+    </p>
+</article>
+
+<!-- Air Information -->
+<article id="AirInfo" class="elementInfo hidden">
+    <p>
+        <strong>--- Air ---</strong><br>
+        Element of intellect, wisdom, and clarity.<br>
+        Represents hotness and moisture.<br>
+        Governs communication, thought, and logic.
+    </p>
+</article>
+
+<!-- Earth Information -->
+<article id="EarthInfo" class="elementInfo hidden">
+    <p>
+        <strong>--- Earth ---</strong><br>
+        Element of solidity, stability, and endurance.<br>
+        Represents coldness and dryness.<br>
+        Governs material matters, practicality, and reliability.
+    </p>
+</article>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
