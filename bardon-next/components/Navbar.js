@@ -28,7 +28,7 @@ const Navbar = () => {
                     className="hamburger" 
                     aria-label="Close Navigation"
                     onClick={() => setNavVisible(!navVisible)}>
-                    &#10005; {/* This is the Unicode character for the close (x) icon */}
+                    &#9776; {/* This is the Unicode character for the close (x) icon */}
                 </button>
             )}
             {!navVisible && (

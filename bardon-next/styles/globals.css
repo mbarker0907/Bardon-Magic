@@ -92,6 +92,38 @@ footer {
     justify-items: center;
 }
 
+@keyframes shimmering {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.hamburger {
+    background: linear-gradient(90deg, #f4e3c9, #dcb061, #f4e3c9);
+    background-size: 200% 100%;
+    animation: shimmering 2s infinite;
+    background-color: #dcb061; /* Using the hover color for better visibility */
+    color: #4a3729; /* Using the text color to match theme */
+    padding: 10px 15px; /* Increased padding for a bigger button */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    border: none; /* Removing default button borders */
+    cursor: pointer; /* Hand cursor for better UX */
+    font-size: 30px; /* Increase font size for better visibility */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+    padding: 15px 20px;
+}
+
+.hamburger:hover {
+    background-color: #f4e3c9; /* Lighter color on hover */
+    color: #6b533f; /* A bit darker text on hover */
+    transform: rotate(360deg);
+    transition: transform 0.5s, background-color 0.3s, color 0.3s; 
+}
+
+
 /* === RESPONSIVE STYLES === */
 @media (max-width: 768px) {
     body {
@@ -118,6 +150,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
 
 @media (min-width: 769px) {
     .hamburger {
