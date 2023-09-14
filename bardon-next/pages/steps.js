@@ -35,7 +35,7 @@ const Steps = () => {
         <div className={styles.step}>
           <h2>Step 3: The Magic of the Word</h2>
           <p>Exploring the power and impact of words, both internally and externally.</p>
-<       /div>
+       </div>
 
         <div className={styles.step}>
             <h2>Step 4: Elemental Equilibrium</h2>

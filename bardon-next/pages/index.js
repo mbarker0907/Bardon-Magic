@@ -20,7 +20,7 @@ import Navbar from '../components/Navbar'; // Removed .js for clarity
                 </section>
 
                 <section className={landingStyles.introduction}>
-                    <img src="/HermesTrismegistus.jpg" alt="Hermes Trismegistus, the legendary father of Hermeticism" className={landingStyles.introImage} />
+                <img src="/coverphoto.jpeg" alt="Cover art from the book, Initiation into Hermetics" className={landingStyles.introImage} />
                     <div className={landingStyles.introText}>
                         <h2>Why Franz Bardon?</h2>
                         <p>

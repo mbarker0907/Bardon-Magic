@@ -10,22 +10,26 @@ body {
     font-size: 18px;
     color: #f4f1e9;
     line-height: 1.9;
-    background-color: #4a3729;
-    background-image: url('../public/wood.jpg'); /* Replace with an appropriate wood texture */
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #1c1c1c, #4a3729);
+
     text-align: center;
 }
 
+/* Added secondary font for improved readability */
+p, li {
+    font-family: 'Arial', sans-serif;
+}
+
 nav a {
-    color: #cabca0;
-    text-decoration: none;
-    transition: 0.2s;
-    font-weight: 600;
+    color: #f4e3c9;
+    padding: 5px 10px; /* Added for visual enhancement */
+    border-radius: 5px; /* Smoothens edges for hover effects */
+    transition: background-color 0.3s, color 0.3s; /* Smoothens hover transition */
 }
 
 nav a:hover, nav a.active {
-    color: #fffdfd;
+    background-color: #dcb061;
+    color: #4a3729;    
     border-bottom: 2px solid #ad9f87;
 }
 
@@ -65,6 +69,9 @@ nav li {
 
 footer {
     text-align: center;
+    padding: 2rem 0;
+    background-color: #4a3729;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .section {
