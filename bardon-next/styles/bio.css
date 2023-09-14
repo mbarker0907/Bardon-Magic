@@ -1,0 +1,13 @@
+/* === BIOGRAPHY PAGE STYLES === */
+#bardonImage img {
+    max-width: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+#bardonBio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+}

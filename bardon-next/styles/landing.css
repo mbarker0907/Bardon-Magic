@@ -1,0 +1,50 @@
+/* === HERO SECTION === */
+#hero-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#hero-section .cta-button {
+    background-color: #8c6148;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    color: #dcd9c9;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#hero-section .cta-button:hover {
+    background-color: #a87860;
+}
+
+/* === INTRODUCTION === */
+.intro-text {
+    padding: 2rem 0;
+}
+
+.intro-image {
+    max-width: 300px;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === TESTIMONIALS === */
+#testimonials {
+    background-color: rgba(255, 255, 255, 0.1); /* Light overlay for differentiation */
+    padding: 2rem 0;
+    border-radius: 10px;
+}
+
+#testimonials blockquote {
+    font-style: italic;
+    padding: 1rem;
+    border-left: 4px solid #8c6148;
+    margin: 2rem 0;
+}
+
+#testimonials footer {
+    text-align: right;
+    font-size: 16px;
+}

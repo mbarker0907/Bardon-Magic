@@ -1,0 +1,118 @@
+/* === ELDER WOOD === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: #f4f1e9;
+    line-height: 1.9;
+    background-color: #4a3729;
+    background-image: url('../public/wood.jpg'); /* Replace with an appropriate wood texture */
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+nav a {
+    color: #cabca0;
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+nav a:hover, nav a.active {
+    color: #fffdfd;
+    border-bottom: 2px solid #ad9f87;
+}
+
+footer p {
+    color: #f4e3c9;
+}
+
+/* === LAYOUT === */
+header, footer {
+    background-color: #6b533f;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+#container {
+    background-color: rgba(91, 71, 56, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    #container {
+        padding: 1rem;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+}
