@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../styles/globals.css';
-import landingStyles from '../styles/landing.css';
+import landingStyles from '../styles/landing.module.css';
 import Navbar from '../components/Navbar'; // Removed .js for clarity
 
 
@@ -14,13 +14,16 @@ import Navbar from '../components/Navbar'; // Removed .js for clarity
 
             <main className={landingStyles.container}>
                 <section className={landingStyles.heroSection}>
+                <img src="/fire.png" alt="Sun" className={landingStyles.sunImage} />
+
                     <h1>Discover the Mystical Teachings of Franz Bardon</h1>
                     <p>Embark on a transformative journey through "Initiation into Hermetics", the very foundation of Hermetic wisdom.</p>
                     <Link href="/bio" className={landingStyles.ctaButton}>Begin Your Journey</Link>
+                    <img src="/water.png" alt="Moon" className={landingStyles.moonImage} />
+
                 </section>
 
                 <section className={landingStyles.introduction}>
-                <img src="/coverphoto.jpeg" alt="Cover art from the book, Initiation into Hermetics" className={landingStyles.introImage} />
                     <div className={landingStyles.introText}>
                         <h2>Why Franz Bardon?</h2>
                         <p>

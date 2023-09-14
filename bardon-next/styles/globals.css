@@ -18,6 +18,11 @@ body {
 /* Added secondary font for improved readability */
 p, li {
     font-family: 'Arial', sans-serif;
+    color: #e0ddd4; 
+    font-size: 1.1em;
+     
+    
+    
 }
 
 nav a {
