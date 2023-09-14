@@ -14,12 +14,10 @@ import Navbar from '../components/Navbar'; // Removed .js for clarity
 
             <main className={landingStyles.container}>
                 <section className={landingStyles.heroSection}>
-                <img src="/fire.png" alt="Sun" className={landingStyles.sunImage} />
 
                     <h1>Discover the Mystical Teachings of Franz Bardon</h1>
                     <p>Embark on a transformative journey through "Initiation into Hermetics", the very foundation of Hermetic wisdom.</p>
                     <Link href="/bio" className={landingStyles.ctaButton}>Begin Your Journey</Link>
-                    <img src="/water.png" alt="Moon" className={landingStyles.moonImage} />
 
                 </section>
 
