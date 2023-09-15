@@ -1,4 +1,13 @@
-/* === ELDER WOOD === */
+:root {
+    --primary-purple: #4B0082;
+    --primary-green: #006400;
+    --text-light: #f4f1e9;
+    --text-dark: #e0ddd4;
+    --accent: #c0c0c0;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +17,9 @@
 body {
     font-family: 'Cinzel', serif;
     font-size: 18px;
-    color: #f4f1e9;
     line-height: 1.9;
-    background: radial-gradient(circle, #663399 /*Potion Purple*/, #3cba54 /*Vial Green*/);
-    animation: hueShift 10s infinite alternate;
+    background: radial-gradient(circle, var(--primary-purple), var(--primary-green));
+    color: var(--text-light);    animation: hueShift 10s infinite alternate;
     text-align: center;
 }
 
@@ -23,7 +31,7 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: linear-gradient(120deg, #663399 /*Potion Purple*/, #c0c0c0 /*Mercury Silver*/, #663399 /*Potion Purple*/);
+    background: linear-gradient(120deg, var(--primary-purple), var(--accent), var(--primary-purple));
     background-size: 300% 300%;
     animation: shimmering 5s infinite;
 }
@@ -40,16 +48,15 @@ p, li {
 }
 
 nav a {
-    color: #c0c0c0; /* Mercury Silver */
+    color: var(--accent); 
     padding: 5px 10px; /* Added for visual enhancement */
     border-radius: 5px; /* Smoothens edges for hover effects */
     transition: background-color 0.3s, color 0.3s; /* Smoothens hover transition */
 }
 
 nav a:hover, nav a.active {
-    background-color: #c0c0c0; /* Mercury Silver */
-    color: #663399; /* Potion Purple */
-    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
+    background-color: var(--accent);
+    color: var(--primary-purple);    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
 }
 footer p {
     color: #f4e3c9;
@@ -57,7 +64,7 @@ footer p {
 
 /* === LAYOUT === */
 header, footer {
-    background-color: #663399; /* Potion Purple */
+    background-color: var(--primary-purple);
     padding: 1.5rem 2rem;
     position: sticky;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -77,7 +84,7 @@ nav li {
 }
 
 #container {
-    background-color: rgba(102, 51, 153, 0.9); /* Slightly transparent Potion Purple */
+    background-color: rgba(75, 0, 130, 0.9); /* Slightly transparent based on primary purple */
     border-radius: 10px;
     padding: 2rem;
     margin: 2rem auto;
@@ -88,7 +95,7 @@ nav li {
 footer {
     text-align: center;
     padding: 2rem 0;
-    background-color: #3cba54; /* Vial Green */
+    background-color: var(--primary-green);
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -115,7 +122,7 @@ footer {
 }
 
 .hamburger {
-    background: radial-gradient(circle, #663399 /*Potion Purple*/, #3cba54 /*Vial Green*/);
+    background: radial-gradient(circle, var(--primary-purple), var(--primary-green));
     animation: hueShift 10s infinite alternate;
     background-color: #dcb061; /* Using the hover color for better visibility */
     color: #4a3729; /* Using the text color to match theme */
