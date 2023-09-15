@@ -1,5 +1,15 @@
+/* Elder's Enigma Theme Variables */
+--primary-bg: #1f1c2c;
+--secondary-bg: #928dab;
+--highlight: #dcb061;
+--text-light: #f4f1e9;
+--text-dark: #e0ddd4;
+--accent: #c0c0c0;
+
+
+
 .container {
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,44 +19,41 @@
 }
 
 .heroSection {
-    position: relative; /* Ensures the sun and moon are positioned relative to this container */
-
-    padding: 3rem 0; /* More vertical spacing for hero section */
-    background: rgba(0, 0, 0, 0.3); /* Subtle dark background to make text pop */
-    border-radius: 10px; /* Smoothens edges */
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Gives depth */
-
+    position: relative; 
+    padding: 3rem 0; 
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin-bottom: 3rem;
 }
 
+.sunImage, .moonImage {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .sunImage, .moonImage {
-    position: absolute; 
-    height: 100px; /* Or desired height */
-    width: auto; 
-    top: 50%; 
-    transform: translateY(-50%); /* This vertically centers the images */
+    width: 200px;
+    height: 200px;
+    position: absolute;
 }
 
 .sunImage {
-    width: 200px;  /* Adjust to desired width */
-    height: 200px;  /* Typically set to auto to maintain aspect ratio */
-    left: -325px; /* Adjust as necessary based on image size and desired spacing */
-    position: absolute; /* Ensure you have this if you're using left/right for positioning */
+    left: -325px;
 }
 
 .moonImage {
-    width: 200px;  /* Adjust to desired width */
-    height: 200px;  /* Typically set to auto to maintain aspect ratio */
-    right: -325px; /* Adjust as necessary based on image size and desired spacing */
-    position: absolute; /* Ensure you have this if you're using left/right for positioning */
+    right: -325px;
 }
 
 .heroSection h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #dcb061; /* gold-ish color for highlights */
+    color: var(--highlight);
     animation: fadeInUp 1.5s ease-out;
 }
 
@@ -57,11 +64,9 @@
     margin-bottom: 2rem;
 }
 
-
-
 .ctaButton {
-    background-color: #dcb061;
-    color: #4a3729;
+    background-color: var(--highlight);
+    color: var(--text-dark);
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -69,14 +74,13 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 10px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(0);
     transition: transform 0.3s, box-shadow 0.3s;
-
 }
+
 .ctaButton:hover {
-    background-color: #f4e3c9;
-    color: #4a3729;
+    background-color: rgba(255, 182, 193, 0.7);  /* rose quartz semi-transparent pink */
+    color: var(--text-dark);  /* you can adjust this if you want a different text color on hover */
     transform: translateY(-3px);
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 
@@ -92,16 +96,14 @@
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .testimonials h2 {
     margin-bottom: 1.5rem;
 }
 
 .testimonials blockquote {
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.1); /* subtle light background */
-    border-left: 3px solid #dcb061;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--highlight);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
 }
@@ -110,9 +112,6 @@
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -126,7 +125,6 @@
 
 @media (max-width: 768px) {
     .sunImage, .moonImage {
-        display: none; /* Hide them on mobile, or adjust as you see fit */
+        display: none;
     }
 }
-

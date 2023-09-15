@@ -55,9 +55,11 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    background-color: var(--accent);
-    color: var(--primary-purple);    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
+    background-color: rgba(255, 182, 193, 0.7);  /* rose quartz semi-transparent pink */
+    color: var(--primary-purple);
+    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
 }
+
 footer p {
     color: #f4e3c9;
 }
