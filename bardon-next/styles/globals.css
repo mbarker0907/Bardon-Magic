@@ -10,10 +10,24 @@ body {
     font-size: 18px;
     color: #f4f1e9;
     line-height: 1.9;
-    background: linear-gradient(135deg, #1c1c1c, #4a3729);
-
+    background: radial-gradient(circle, #663399 /*Potion Purple*/, #3cba54 /*Vial Green*/);
+    animation: hueShift 10s infinite alternate;
     text-align: center;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(120deg, #663399 /*Potion Purple*/, #c0c0c0 /*Mercury Silver*/, #663399 /*Potion Purple*/);
+    background-size: 300% 300%;
+    animation: shimmering 5s infinite;
+}
+
 
 /* Added secondary font for improved readability */
 p, li {
@@ -26,25 +40,24 @@ p, li {
 }
 
 nav a {
-    color: #f4e3c9;
+    color: #c0c0c0; /* Mercury Silver */
     padding: 5px 10px; /* Added for visual enhancement */
     border-radius: 5px; /* Smoothens edges for hover effects */
     transition: background-color 0.3s, color 0.3s; /* Smoothens hover transition */
 }
 
 nav a:hover, nav a.active {
-    background-color: #dcb061;
-    color: #4a3729;    
-    border-bottom: 2px solid #ad9f87;
+    background-color: #c0c0c0; /* Mercury Silver */
+    color: #663399; /* Potion Purple */
+    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
 }
-
 footer p {
     color: #f4e3c9;
 }
 
 /* === LAYOUT === */
 header, footer {
-    background-color: #6b533f;
+    background-color: #663399; /* Potion Purple */
     padding: 1.5rem 2rem;
     position: sticky;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -64,7 +77,7 @@ nav li {
 }
 
 #container {
-    background-color: rgba(91, 71, 56, 0.9);
+    background-color: rgba(102, 51, 153, 0.9); /* Slightly transparent Potion Purple */
     border-radius: 10px;
     padding: 2rem;
     margin: 2rem auto;
@@ -75,7 +88,7 @@ nav li {
 footer {
     text-align: center;
     padding: 2rem 0;
-    background-color: #4a3729;
+    background-color: #3cba54; /* Vial Green */
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -92,19 +105,18 @@ footer {
     justify-items: center;
 }
 
-@keyframes shimmering {
-    0% {
-        background-position: -100% 0;
+@keyframes hueShift {
+    0%, 100% {
+        filter: hue-rotate(15deg);
     }
-    100% {
-        background-position: 100% 0;
+    50% {
+        filter: hue-rotate(60deg);
     }
 }
 
 .hamburger {
-    background: linear-gradient(90deg, #f4e3c9, #dcb061, #f4e3c9);
-    background-size: 200% 100%;
-    animation: shimmering 2s infinite;
+    background: radial-gradient(circle, #663399 /*Potion Purple*/, #3cba54 /*Vial Green*/);
+    animation: hueShift 10s infinite alternate;
     background-color: #dcb061; /* Using the hover color for better visibility */
     color: #4a3729; /* Using the text color to match theme */
     padding: 10px 15px; /* Increased padding for a bigger button */
@@ -114,6 +126,65 @@ footer {
     font-size: 30px; /* Increase font size for better visibility */
     transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
     padding: 15px 20px;
+    position: relative; /* Required for positioning the pseudo-elements */
+
+}
+
+.hamburger::before, 
+.hamburger::after,
+nav li:nth-child(1)::before, 
+nav li:nth-child(1)::after,
+nav li:nth-child(2)::before, 
+nav li:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 5px; /* Size of the particles */
+    height: 5px;
+    border-radius: 50%; /* Makes it circular */
+    background: radial-gradient(circle, #a66dc7 50%, transparent 100%);
+    animation: float 5s infinite alternate; /* Makes them float up and down */
+    pointer-events: none; /* Ensures the particles don't interfere with clicking */
+}
+
+.hamburger::before {
+    top: -10px;
+    left: -10px;
+}
+
+.hamburger::after {
+    bottom: -10px;
+    right: -10px;
+}
+
+nav li:nth-child(1)::before {
+    top: -5px;
+    left: 25%;
+}
+
+nav li:nth-child(1)::after {
+    bottom: -5px;
+    right: 25%;
+}
+
+nav li:nth-child(2)::before {
+    top: 5px;
+    left: 75%;
+}
+
+nav li:nth-child(2)::after {
+    bottom: 5px;
+    right: 75%;
+}
+
+
+    
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .hamburger:hover {

@@ -1,0 +1,61 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Shared styles for all cards */
+.cardContainer {
+    perspective: 1000px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden; /* To ensure that the gradients do not exceed the card's boundaries */
+}
+
+.cardFace {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    transition: background 0.5s;
+    font-weight: bold;
+}
+
+/* Fire Card */
+.fire .cardFace {
+    background: linear-gradient(120deg, #ff4500, #ff8c00); /* Oranges for a fiery look */
+    color: #f4f1e9;
+}
+
+/* Water Card */
+.water .cardFace {
+    background: linear-gradient(120deg, #1e90ff, #00ced1); /* Blues for a watery look */
+    color: #f4f1e9;
+}
+
+/* Air Card */
+.air .cardFace {
+    background: linear-gradient(120deg, #f0e68c, #e6e6fa); /* Light colors for an airy look */
+    color: #663399; /* Potion Purple */
+}
+
+/* Earth Card */
+.earth .cardFace {
+    background: linear-gradient(120deg, #8b4513, #228b22); /* Browns and greens for an earthy look */
+    color: #f4f1e9;
+}
+
+/* Akasha Card */
+.akasha .cardFace {
+    background: linear-gradient(120deg, #4b0082, #9400d3); /* Purples for the ethereal akasha look */
+    color: #f4f1e9;
+}

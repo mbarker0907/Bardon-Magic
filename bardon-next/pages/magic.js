@@ -1,56 +1,46 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import styles from '../styles/globals.css';
-import Navbar from '../components/Navbar';
+import React from 'react';
+import ElementCard from '../components/ElementCard';  // Adjust the path if necessary
+import Navbar from '../components/Navbar';  // Assuming Navbar is a separate component
+import styles from '../styles/elements.module.css';  // Assuming you want to use the same styles as the home page, adjust the path if necessary
 
-const MagicOfTheElements = () => {
+const Magic = () => {
   return (
-    <div>
-      <Head>
-        <title>Magic of the Elements</title>
-        <meta name="description" content="Franz Bardon's perspective on elemental magic." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div>
+          {/* Header with Navbar */}
+          <header>
+              <Navbar />
+          </header>
 
-      <header className={styles.pageTitle}>
-        <Navbar />
-      </header>
+          {/* Main content area */}
+          <main className={styles.container}>
+              {/* If you have any hero section or intro for this page, include them here */}
 
-      <div id="container">
-        <h1>Magic of the Elements: Bardon's Perspective</h1>
+              {/* Element Cards */}
+              <div className={styles.cardsContainer}> 
+    {/* Fire Card */}
+    <ElementCard type="fire" title="Fire" description="The element of passion, desire and energy." />
 
-        <div className={styles.elementSection}>
-          <h2>Element of Fire</h2>
-          <p>The element of Fire represents willpower, transformative energy, and passion. In Bardon's teachings, working with the Fire element facilitates personal transformation and the harnessing of one's will.</p>
-        </div>
+    {/* Water Card */}
+    <ElementCard type="water" title="Water" description="The element of emotion, intuition and deep insight." />
 
-        <div className={styles.elementSection}>
-          <h2>Element of Water</h2>
-          <p>Water embodies emotions, intuition, and the flow of life. Engaging with the Water element, a practitioner learns to balance emotions and harness intuition.</p>
-        </div>
+    {/* Air Card */}
+    <ElementCard type="air" title="Air" description="The element of intellect, logic and communication." />
 
-        <div className={styles.elementSection}>
-          <h2>Element of Air</h2>
-          <p>Representing the intellect and thoughts, the Air element emphasizes clarity of mind, communication, and intellectual exploration.</p>
-        </div>
+    {/* Earth Card */}
+    <ElementCard type="earth" title="Earth" description="The element of stability, foundation and physical sensation." />
 
-        <div className={styles.elementSection}>
-          <h2>Element of Earth</h2>
-          <p>The Earth element stands for stability, physicality, and grounding. Engaging with Earth enables grounding of energies and fortifying the physical body.</p>
-        </div>
+    {/* Akasha Card */}
+    <ElementCard type="akasha" title="Akasha" description="The ethereal element representing spirit and space." />
+</div>
 
-        <div className={styles.elementSection}>
-          <h2>Element of Akasha (Spirit)</h2>
-          <p>Often referred to as the "fifth element," Akasha represents the all-encompassing spirit or ether. It is the binding force between the elements and serves as a bridge between the material and spiritual realms.</p>
-        </div>
+          </main>
 
+          {/* Footer */}
+          <footer className={styles.footer}>
+              <p>© 2023 Bardon Magic Web App. All rights reserved.</p>
+          </footer>
       </div>
-
-      <footer className={styles.footer}>
-        <p>© 2023 Initiation into Hermetics. All rights reserved.</p>
-      </footer>
-    </div>
   );
 }
 
-export default MagicOfTheElements;
+export default Magic;
