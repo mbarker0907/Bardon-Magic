@@ -1,53 +1,30 @@
-/* Elder's Enigma Theme Variables */
---primary-bg: #1f1c2c;
---secondary-bg: #928dab;
---highlight: #dcb061;
---text-light: #f4f1e9;
---text-dark: #e0ddd4;
---accent: #c0c0c0;
-
-
-
 .container {
+   /* Amethyst Aura Theme */
+--primary-bg: #4B0082;
+--secondary-bg: #9400D3;
+--highlight: #D8BFD8;
+--text-light: #E6E6FA;
+--text-dark: #800080;
+--accent: #9932CC;
+--hover-bg: rgba(153, 50, 204, 0.7);
+--hover-text-color: #4B0082;
     background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
     padding: 20px;
     border-radius: 10px;
 }
 
 .heroSection {
-    position: relative; 
-    padding: 3rem 0; 
-    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 3rem 0;
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin-bottom: 3rem;
-}
-
-.sunImage, .moonImage {
-    position: absolute;
-    height: 100px;
-    width: auto;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.sunImage, .moonImage {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-}
-
-.sunImage {
-    left: -325px;
-}
-
-.moonImage {
-    right: -325px;
 }
 
 .heroSection h1 {
@@ -70,19 +47,17 @@
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 10px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(0);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .ctaButton:hover {
-    background-color: rgba(255, 182, 193, 0.7);  /* rose quartz semi-transparent pink */
-    color: var(--text-dark);  /* you can adjust this if you want a different text color on hover */
+    background-color: var(--hover-bg);
+    color: var(--hover-text-color);
     transform: translateY(-3px);
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .introduction {
     display: flex;

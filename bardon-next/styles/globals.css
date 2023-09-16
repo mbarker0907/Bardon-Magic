@@ -1,244 +1,177 @@
 :root {
-    --primary-purple: #4B0082;
-    --primary-green: #006400;
-    --text-light: #f4f1e9;
-    --text-dark: #e0ddd4;
-    --accent: #c0c0c0;
-}
+   /* Amethyst Aura Theme */
+--primary-bg: #4B0082; /* indigo */
+--secondary-bg: #9400D3; /* violet */
+--highlight: #D8BFD8; /* thistle */
+--text-light: #E6E6FA; /* lavender */
+--text-dark: #800080; /* purple */
+--accent: #9932CC; /* dark orchid */
+--hover-bg: rgba(153, 50, 204, 0.7); /* dark orchid hover */
+--hover-text-color: #4B0082; /* indigo */
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    line-height: 1.9;
-    background: radial-gradient(circle, var(--primary-purple), var(--primary-green));
-    color: var(--text-light);    animation: hueShift 10s infinite alternate;
-    text-align: center;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background: linear-gradient(120deg, var(--primary-purple), var(--accent), var(--primary-purple));
-    background-size: 300% 300%;
-    animation: shimmering 5s infinite;
-}
-
-
-/* Added secondary font for improved readability */
-p, li {
-    font-family: 'Arial', sans-serif;
-    color: #e0ddd4; 
-    font-size: 1.1em;
-     
+    /* ---------------------------------- */
+    }
     
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     
-}
-
-nav a {
-    color: var(--accent); 
-    padding: 5px 10px; /* Added for visual enhancement */
-    border-radius: 5px; /* Smoothens edges for hover effects */
-    transition: background-color 0.3s, color 0.3s; /* Smoothens hover transition */
-}
-
-nav a:hover, nav a.active {
-    background-color: rgba(255, 182, 193, 0.7);  /* rose quartz semi-transparent pink */
-    color: var(--primary-purple);
-    border-bottom: 2px solid #f4f1e9; /* Light border for contrast */
-}
-
-footer p {
-    color: #f4e3c9;
-}
-
-/* === LAYOUT === */
-header, footer {
-    background-color: var(--primary-purple);
-    padding: 1.5rem 2rem;
-    position: sticky;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 1rem;
-}
-
-#container {
-    background-color: rgba(75, 0, 130, 0.9); /* Slightly transparent based on primary purple */
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: var(--primary-green);
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    justify-items: center;
-}
-
-@keyframes hueShift {
-    0%, 100% {
-        filter: hue-rotate(15deg);
-    }
-    50% {
-        filter: hue-rotate(60deg);
-    }
-}
-
-.hamburger {
-    background: radial-gradient(circle, var(--primary-purple), var(--primary-green));
-    animation: hueShift 10s infinite alternate;
-    background-color: #dcb061; /* Using the hover color for better visibility */
-    color: #4a3729; /* Using the text color to match theme */
-    padding: 10px 15px; /* Increased padding for a bigger button */
-    border-radius: 5px; /* Rounded corners for a smoother look */
-    border: none; /* Removing default button borders */
-    cursor: pointer; /* Hand cursor for better UX */
-    font-size: 30px; /* Increase font size for better visibility */
-    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
-    padding: 15px 20px;
-    position: relative; /* Required for positioning the pseudo-elements */
-
-}
-
-.hamburger::before, 
-.hamburger::after,
-nav li:nth-child(1)::before, 
-nav li:nth-child(1)::after,
-nav li:nth-child(2)::before, 
-nav li:nth-child(2)::after {
-    content: "";
-    position: absolute;
-    width: 5px; /* Size of the particles */
-    height: 5px;
-    border-radius: 50%; /* Makes it circular */
-    background: radial-gradient(circle, #a66dc7 50%, transparent 100%);
-    animation: float 5s infinite alternate; /* Makes them float up and down */
-    pointer-events: none; /* Ensures the particles don't interfere with clicking */
-}
-
-.hamburger::before {
-    top: -10px;
-    left: -10px;
-}
-
-.hamburger::after {
-    bottom: -10px;
-    right: -10px;
-}
-
-nav li:nth-child(1)::before {
-    top: -5px;
-    left: 25%;
-}
-
-nav li:nth-child(1)::after {
-    bottom: -5px;
-    right: 25%;
-}
-
-nav li:nth-child(2)::before {
-    top: 5px;
-    left: 75%;
-}
-
-nav li:nth-child(2)::after {
-    bottom: 5px;
-    right: 75%;
-}
-
-
-    
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-.hamburger:hover {
-    background-color: #f4e3c9; /* Lighter color on hover */
-    color: #6b533f; /* A bit darker text on hover */
-    transform: rotate(360deg);
-    transition: transform 0.5s, background-color 0.3s, color 0.3s; 
-}
-
-
-/* === RESPONSIVE STYLES === */
-@media (max-width: 768px) {
     body {
-        font-size: 16px;
+        font-family: 'Cinzel', serif;
+        font-size: 18px;
+        line-height: 1.9;
+        background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
+        color: var(--text-light);
+        animation: hueShift 10s infinite alternate;
+        text-align: center;
     }
-
+    
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: linear-gradient(120deg, var(--primary-bg), var(--accent), var(--secondary-bg));
+        background-size: 300% 300%;
+        animation: shimmering 5s infinite;
+    }
+    
+    p, li {
+        font-family: 'Arial', sans-serif;
+        color: #e0ddd4; 
+        font-size: 1.1em;
+    }
+    
+    nav a {
+        color: var(--accent); 
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    nav a:hover, nav a.active {
+        background-color: var(--hover-bg);  
+        color: var(--primary-bg);
+        border-bottom: 2px solid var(--text-light);
+    }
+    
+    footer p {
+        color: var(--highlight);
+    }
+    
+    header, footer {
+        background-color: var(--primary-bg);
+        padding: 1.5rem 2rem;
+        position: sticky;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
     nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 0.5rem 0;
-    }
-
-    #container {
-        padding: 1rem;
-    }
-
-    .section {
-        flex-direction: column;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
-@media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
-
-    nav {
+        list-style-type: none;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
     }
-}
+    
+    nav li {
+        margin: 0 1rem;
+    }
+    
+    #container {
+        background-color: rgba(75, 0, 130, 0.9);
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+        text-align: center;
+        padding: 2rem 0;
+        background-color: var(--secondary-bg);
+        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        justify-items: center;
+    }
+    
+    @keyframes hueShift {
+        0%, 100% {
+            filter: hue-rotate(15deg);
+        }
+        50% {
+            filter: hue-rotate(60deg);
+        }
+    }
+    
+    .hamburger {
+        background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
+        animation: hueShift 10s infinite alternate;
+        background-color: var(--hover-bg);
+        color: var(--text-dark);
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    /* ... Rest of the styles remain the same ... */
+    
+    @media (max-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+    
+        nav ul {
+            flex-direction: column;
+        }
+    
+        nav li {
+            margin: 0.5rem 0;
+        }
+    
+        #container {
+            padding: 1rem;
+        }
+    
+        .section {
+            flex-direction: column;
+        }
+    
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (min-width: 769px) {
+        .hamburger {
+            display: none;
+        }
+    
+        nav {
+            display: flex;
+        }
+    }
+    

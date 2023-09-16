@@ -1,19 +1,35 @@
 .cardsContainer {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: no-wrap; /* Ensure they don't wrap */
+    gap: -100px; /* Overlap cards */
     justify-content: center;
+    align-items: center; /* Center vertically */
     padding: 20px;
+    overflow-x: scroll; /* Allows for horizontal scrolling on mobile */
+
+    /* Hide scrollbar but still allow scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.cardsContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
 }
 
-/* Shared styles for all cards */
 .cardContainer {
     perspective: 1000px;
     width: 300px;
     height: 500px;
     position: relative;
     border-radius: 5px;
-    overflow: hidden; /* To ensure that the gradients do not exceed the card's boundaries */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition for the pop effect */
+    z-index: 1; /* Normal stacking order */
+}
+
+.cardContainer:hover,
+.cardContainer:active {
+    transform: scale(1.1);
+    z-index: 2; /* Bring to front when touched or hovered */
 }
 
 .cardFace {
@@ -32,30 +48,30 @@
 
 /* Fire Card */
 .fire .cardFace {
-    background: linear-gradient(120deg, #ff4500, #ff8c00); /* Oranges for a fiery look */
+    background: linear-gradient(120deg, #ff4500, #ff8c00);
     color: #f4f1e9;
 }
 
 /* Water Card */
 .water .cardFace {
-    background: linear-gradient(120deg, #1e90ff, #00ced1); /* Blues for a watery look */
+    background: linear-gradient(120deg, #1e90ff, #00ced1);
     color: #f4f1e9;
 }
 
 /* Air Card */
 .air .cardFace {
-    background: linear-gradient(120deg, #f0e68c, #e6e6fa); /* Light colors for an airy look */
+    background: linear-gradient(120deg, #f0e68c, #e6e6fa);
     color: #663399; /* Potion Purple */
 }
 
 /* Earth Card */
 .earth .cardFace {
-    background: linear-gradient(120deg, #8b4513, #228b22); /* Browns and greens for an earthy look */
+    background: linear-gradient(120deg, #8b4513, #228b22);
     color: #f4f1e9;
 }
 
 /* Akasha Card */
 .akasha .cardFace {
-    background: linear-gradient(120deg, #4b0082, #9400d3); /* Purples for the ethereal akasha look */
+    background: linear-gradient(120deg, #4b0082, #9400d3);
     color: #f4f1e9;
 }

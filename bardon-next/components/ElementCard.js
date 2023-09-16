@@ -4,6 +4,11 @@ import styles from '../styles/elements.module.css';
 
 const ElementCard = ({ title, description, type }) => {
   const [flipped, setFlipped] = useState(false);
+  const [touching, setTouching] = useState(false);
+  const [hovering, setHovering] = useState(false);
+
+  const handleMouseEnter = () => setHovering(true);
+  const handleMouseLeave = () => setHovering(false);
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -12,7 +17,17 @@ const ElementCard = ({ title, description, type }) => {
   });
 
   return (
-    <div className={`${styles.cardContainer} ${styles[type]}`} onClick={() => setFlipped(!flipped)}>
+    <div 
+      className={`${styles.cardContainer} ${styles[type]}`} 
+      onClick={() => setFlipped(!flipped)}
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={() => setTouching(true)}
+      onTouchEnd={() => setTouching(false)}
+      style={{ 
+        transform: (touching || hovering) ? 'scale(1.1)' : 'scale(1)'
+      }}
+    >
       {/* Card Front */}
       <animated.div 
         className={`${styles.cardFace} ${styles.cardFront}`}

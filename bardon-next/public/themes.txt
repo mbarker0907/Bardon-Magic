@@ -1,0 +1,228 @@
+/* globals.css format */
+/* Alchemist's Gold Theme */
+--primary-bg: #8B4513; /* saddlebrown */
+--secondary-bg: #FFD700; /* goldenrod */
+--highlight: #FFFAF0; /* floral white */
+--text-light: #FFF8DC; /* cornsilk */
+--text-dark: #8B4513; /* saddlebrown */
+--accent: #FFA500; /* orange */
+--hover-bg: rgba(255, 215, 0, 0.7); /* gold hover */
+--hover-text-color: #8B4513; /* saddlebrown */
+
+/* landing module format */
+/* Alchemist's Gold Theme */
+--primary-bg: #8B4513;
+--secondary-bg: #FFD700;
+--highlight: #FFFAF0;
+--text-light: #FFF8DC;
+--text-dark: #8B4513;
+--accent: #FFA500;
+--hover-bg: rgba(255, 215, 0, 0.7);
+--hover-text-color: #8B4513;
+
+
+/* globals.css format */
+/* Mystic Moonlight Theme */
+--primary-bg: #483D8B; /* dark slate blue */
+--secondary-bg: #F8F8FF; /* ghost white */
+--highlight: #E6E6FA; /* lavender */
+--text-light: #D8BFD8; /* thistle */
+--text-dark: #4B0082; /* indigo */
+--accent: #8A2BE2; /* blue violet */
+--hover-bg: rgba(138, 43, 226, 0.7); /* blue violet hover */
+--hover-text-color: #483D8B; /* dark slate blue */
+
+/* landing module format */
+/* Mystic Moonlight Theme */
+--primary-bg: #483D8B;
+--secondary-bg: #F8F8FF;
+--highlight: #E6E6FA;
+--text-light: #D8BFD8;
+--text-dark: #4B0082;
+--accent: #8A2BE2;
+--hover-bg: rgba(138, 43, 226, 0.7);
+--hover-text-color: #483D8B;
+
+/* globals.css format */
+/* Emerald Enigma Theme */
+--primary-bg: #006400; /* dark green */
+--secondary-bg: #ADFF2F; /* green yellow */
+--highlight: #7FFF00; /* chartreuse */
+--text-light: #F0FFF0; /* honeydew */
+--text-dark: #228B22; /* forest green */
+--accent: #32CD32; /* lime green */
+--hover-bg: rgba(50, 205, 50, 0.7); /* lime green hover */
+--hover-text-color: #006400; /* dark green */
+
+/* landing module format */
+/* Emerald Enigma Theme */
+--primary-bg: #006400;
+--secondary-bg: #ADFF2F;
+--highlight: #7FFF00;
+--text-light: #F0FFF0;
+--text-dark: #228B22;
+--accent: #32CD32;
+--hover-bg: rgba(50, 205, 50, 0.7);
+--hover-text-color: #006400;
+
+/* globals.css format */
+/* Sapphire Secrets Theme */
+--primary-bg: #000080; /* navy */
+--secondary-bg: #1E90FF; /* dodger blue */
+--highlight: #B0C4DE; /* light steel blue */
+--text-light: #E6E6FA; /* lavender */
+--text-dark: #00008B; /* dark blue */
+--accent: #4169E1; /* royal blue */
+--hover-bg: rgba(65, 105, 225, 0.7); /* royal blue hover */
+--hover-text-color: #000080; /* navy */
+
+/* landing module format */
+/* Sapphire Secrets Theme */
+--primary-bg: #000080;
+--secondary-bg: #1E90FF;
+--highlight: #B0C4DE;
+--text-light: #E6E6FA;
+--text-dark: #00008B;
+--accent: #4169E1;
+--hover-bg: rgba(65, 105, 225, 0.7);
+--hover-text-color: #000080;
+
+/* globals.css format */
+/* Topaz Twilight Theme */
+--primary-bg: #FF4500; /* orangered */
+--secondary-bg: #FFD700; /* gold */
+--highlight: #FFA07A; /* light salmon */
+--text-light: #FFE4B5; /* moccasin */
+--text-dark: #8B0000; /* dark red */
+--accent: #FF6347; /* tomato */
+--hover-bg: rgba(255, 99, 71, 0.7); /* tomato hover */
+--hover-text-color: #FF4500; /* orangered */
+
+/* landing module format */
+/* Topaz Twilight Theme */
+--primary-bg: #FF4500;
+--secondary-bg: #FFD700;
+--highlight: #FFA07A;
+--text-light: #FFE4B5;
+--text-dark: #8B0000;
+--accent: #FF6347;
+--hover-bg: rgba(255, 99, 71, 0.7);
+--hover-text-color: #FF4500;
+
+/* globals.css format */
+/* Amethyst Aura Theme */
+--primary-bg: #4B0082; /* indigo */
+--secondary-bg: #9400D3; /* violet */
+--highlight: #D8BFD8; /* thistle */
+--text-light: #E6E6FA; /* lavender */
+--text-dark: #800080; /* purple */
+--accent: #9932CC; /* dark orchid */
+--hover-bg: rgba(153, 50, 204, 0.7); /* dark orchid hover */
+--hover-text-color: #4B0082; /* indigo */
+
+/* landing module format */
+/* Amethyst Aura Theme */
+--primary-bg: #4B0082;
+--secondary-bg: #9400D3;
+--highlight: #D8BFD8;
+--text-light: #E6E6FA;
+--text-dark: #800080;
+--accent: #9932CC;
+--hover-bg: rgba(153, 50, 204, 0.7);
+--hover-text-color: #4B0082;
+
+/* globals.css format */
+/* Obsidian Oracles Theme */
+--primary-bg: #2F4F4F; /* dark slate gray */
+--secondary-bg: #696969; /* dim gray */
+--highlight: #778899; /* light slate gray */
+--text-light: #C0C0C0; /* silver */
+--text-dark: #000000; /* black */
+--accent: #708090; /* slate gray */
+--hover-bg: rgba(112, 128, 144, 0.7); /* slate gray hover */
+--hover-text-color: #2F4F4F; /* dark slate gray */
+
+/* landing module format */
+/* Obsidian Oracles Theme */
+--primary-bg: #2F4F4F;
+--secondary-bg: #696969;
+--highlight: #778899;
+--text-light: #C0C0C0;
+--text-dark: #000000;
+--accent: #708090;
+--hover-bg: rgba(112, 128, 144, 0.7);
+--hover-text-color: #2F4F4F;
+
+/* globals.css format */
+/* Luminous Luna Theme */
+--primary-bg: #f0e68c; /* khaki */
+--secondary-bg: #eee8aa; /* pale goldenrod */
+--highlight: #b0e0e6; /* powder blue */
+--text-light: #f5fffa; /* mint cream */
+--text-dark: #483d8b; /* dark slate blue */
+--accent: #d3d3d3; /* light gray */
+--hover-bg: rgba(205, 201, 201, 0.7); /* hover light gray */
+--hover-text-color: #f0e68c; /* khaki */
+
+/* landing module format */
+/* Luminous Luna Theme */
+--primary-bg: #f0e68c;
+--secondary-bg: #eee8aa;
+--highlight: #b0e0e6;
+--text-light: #f5fffa;
+--text-dark: #483d8b;
+--accent: #d3d3d3;
+--hover-bg: rgba(205, 201, 201, 0.7);
+--hover-text-color: #f0e68c;
+
+/* globals.css format */
+/* Celestial Charms Theme */
+--primary-bg: #dda0dd; /* plum */
+--secondary-bg: #da70d6; /* orchid */
+--highlight: #eee0e5; /* lavender blush */
+--text-light: #fff0f5; /* lavender blush */
+--text-dark: #8a2be2; /* violet (blue) */
+--accent: #9370db; /* medium purple */
+--hover-bg: rgba(147, 112, 219, 0.7); /* hover medium purple */
+--hover-text-color: #dda0dd; /* plum */
+
+/* landing module format */
+/* Celestial Charms Theme */
+--primary-bg: #dda0dd;
+--secondary-bg: #da70d6;
+--highlight: #eee0e5;
+--text-light: #fff0f5;
+--text-dark: #8a2be2;
+--accent: #9370db;
+--hover-bg: rgba(147, 112, 219, 0.7);
+--hover-text-color: #dda0dd;
+
+/* globals.css format */
+/* Ethereal Emerald Theme */
+--primary-bg: #228b22; /* forest green */
+--secondary-bg: #adff2f; /* green yellow */
+--highlight: #98fb98; /* pale green */
+--text-light: #f5fffa; /* mint cream */
+--text-dark: #006400; /* dark green */
+--accent: #32cd32; /* lime green */
+--hover-bg: rgba(50, 205, 50, 0.7); /* hover lime green */
+--hover-text-color: #228b22; /* forest green */
+
+/* landing module format */
+/* Ethereal Emerald Theme */
+--primary-bg: #228b22;
+--secondary-bg: #adff2f;
+--highlight: #98fb98;
+--text-light: #f5fffa;
+--text-dark: #006400;
+--accent: #32cd32;
+--hover-bg: rgba(50, 205, 50, 0.7);
+--hover-text-color: #228b22;
+
+
+
+
+
+
+
+
