@@ -1,12 +1,13 @@
 :root {
-    --primary-bg: #191919; /* Almost Black */
-    --secondary-bg: #2E2E2E; /* Dark Gray */
-    --highlight: #E6E6E6; /* Snow */
-    --text-light: #FFD700; /* Gold */
-    --text-dark: #4B0082; /* Indigo */
-    --accent: #C0C0C0; /* Silver */
-    --hover-bg: rgba(192, 192, 192, 0.7); /* Silver hover */
-    --hover-text-color: #191919; /* Almost Black */
+    /* Amethyst Aura Theme */
+--primary-bg: #4B0082; /* indigo */
+--secondary-bg: #9400D3; /* violet */
+--highlight: #D8BFD8; /* thistle */
+--text-light: #E6E6FA; /* lavender */
+--text-dark: #800080; /* purple */
+--accent: #9932CC; /* dark orchid */
+--hover-bg: rgba(153, 50, 204, 0.7); /* dark orchid hover */
+--hover-text-color: #4B0082; /* indigo */
 }
 
 
