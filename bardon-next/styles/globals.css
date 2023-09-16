@@ -1,177 +1,170 @@
 :root {
-   /* Amethyst Aura Theme */
---primary-bg: #4B0082; /* indigo */
---secondary-bg: #9400D3; /* violet */
---highlight: #D8BFD8; /* thistle */
---text-light: #E6E6FA; /* lavender */
---text-dark: #800080; /* purple */
---accent: #9932CC; /* dark orchid */
---hover-bg: rgba(153, 50, 204, 0.7); /* dark orchid hover */
---hover-text-color: #4B0082; /* indigo */
+    --primary-bg: #191919; /* Almost Black */
+    --secondary-bg: #2E2E2E; /* Dark Gray */
+    --highlight: #E6E6E6; /* Snow */
+    --text-light: #FFD700; /* Gold */
+    --text-dark: #4B0082; /* Indigo */
+    --accent: #C0C0C0; /* Silver */
+    --hover-bg: rgba(192, 192, 192, 0.7); /* Silver hover */
+    --hover-text-color: #191919; /* Almost Black */
+}
 
-    /* ---------------------------------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    line-height: 1.9;
+    background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-light);
+    animation: none;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(120deg, var(--primary-bg), var(--accent), var(--secondary-bg));
+    background-size: 300% 300%;
+    animation: shimmering 5s infinite, hueShift 10s infinite alternate; /* Apply hueShift to the background only */
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-light); /* Adjusted to use the light text color */
+    font-size: 1.1em;
+}
+
+nav a {
+    color: var(--accent); 
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--hover-bg);  
+    color: var(--primary-bg);
+    border-bottom: 2px solid var(--text-light);
+}
+
+footer p {
+    color: var(--highlight);
+}
+
+header, footer {
+    background-color: var(--primary-bg);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+#container {
+    background-color: var(--primary-bg); /* Adjusted to use the primary background color */
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--secondary-bg);
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+@keyframes hueShift {
+    0%, 100% {
+        filter: hue-rotate(15deg);
     }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    50% {
+        filter: hue-rotate(60deg);
     }
-    
+}
+
+.hamburger {
+    background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
+    animation: hueShift 10s infinite alternate;
+    background-color: var(--hover-bg);
+    color: var(--text-dark);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 15px 20px;
+    position: relative;
+    display: none; /* Hide by default */
+
+}
+
+/* ... Rest of the styles remain the same ... */
+
+@media (max-width: 768px) {
     body {
-        font-family: 'Cinzel', serif;
-        font-size: 18px;
-        line-height: 1.9;
-        background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
-        color: var(--text-light);
-        animation: hueShift 10s infinite alternate;
-        text-align: center;
+        font-size: 16px;
     }
-    
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        background: linear-gradient(120deg, var(--primary-bg), var(--accent), var(--secondary-bg));
-        background-size: 300% 300%;
-        animation: shimmering 5s infinite;
-    }
-    
-    p, li {
-        font-family: 'Arial', sans-serif;
-        color: #e0ddd4; 
-        font-size: 1.1em;
-    }
-    
-    nav a {
-        color: var(--accent); 
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    
-    nav a:hover, nav a.active {
-        background-color: var(--hover-bg);  
-        color: var(--primary-bg);
-        border-bottom: 2px solid var(--text-light);
-    }
-    
-    footer p {
-        color: var(--highlight);
-    }
-    
-    header, footer {
-        background-color: var(--primary-bg);
-        padding: 1.5rem 2rem;
-        position: sticky;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    
+
     nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        padding: 0;
+        flex-direction: column;
     }
-    
+
     nav li {
-        margin: 0 1rem;
+        margin: 0.5rem 0;
     }
-    
-    #container {
-        background-color: rgba(75, 0, 130, 0.9);
-        border-radius: 10px;
-        padding: 2rem;
-        margin: 2rem auto;
-        max-width: 1000px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    footer {
-        text-align: center;
-        padding: 2rem 0;
-        background-color: var(--secondary-bg);
-        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        justify-items: center;
-    }
-    
-    @keyframes hueShift {
-        0%, 100% {
-            filter: hue-rotate(15deg);
-        }
-        50% {
-            filter: hue-rotate(60deg);
-        }
-    }
-    
+
     .hamburger {
-        background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
-        animation: hueShift 10s infinite alternate;
-        background-color: var(--hover-bg);
-        color: var(--text-dark);
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-size: 30px;
-        transition: background-color 0.3s, color 0.3s;
-        padding: 15px 20px;
-        position: relative;
+        display: block; /* Show on mobile devices */
     }
-    
-    /* ... Rest of the styles remain the same ... */
-    
-    @media (max-width: 768px) {
-        body {
-            font-size: 16px;
-        }
-    
-        nav ul {
-            flex-direction: column;
-        }
-    
-        nav li {
-            margin: 0.5rem 0;
-        }
-    
-        #container {
-            padding: 1rem;
-        }
-    
-        .section {
-            flex-direction: column;
-        }
-    
-        .grid {
-            grid-template-columns: 1fr;
-        }
+
+    #container {
+        padding: 1rem;
     }
-    
-    @media (min-width: 769px) {
-        .hamburger {
-            display: none;
-        }
-    
-        nav {
-            display: flex;
-        }
+
+    .section {
+        flex-direction: column;
     }
-    
+
+    .grid {
+        grid-template-columns: 1fr;
+    }}

@@ -15,6 +15,7 @@
     background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
     padding: 20px;
     border-radius: 10px;
+    filter: none;
 }
 
 .heroSection {

@@ -1,18 +1,10 @@
 .cardsContainer {
     display: flex;
-    flex-wrap: no-wrap; /* Ensure they don't wrap */
-    gap: -100px; /* Overlap cards */
-    justify-content: center;
-    align-items: center; /* Center vertically */
+    align-items: center; 
     padding: 20px;
-    overflow-x: scroll; /* Allows for horizontal scrolling on mobile */
-
-    /* Hide scrollbar but still allow scrolling */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-.cardsContainer::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+    overflow-y: auto;
+    justify-content: center;
+    filter: none; /* Ensure no global hue shift affects this container */
 }
 
 .cardContainer {
@@ -22,17 +14,19 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Smooth transition for the pop effect */
-    z-index: 1; /* Normal stacking order */
+    transition: transform 0.3s ease;
+    margin: 20px;
+    z-index: 0; 
+    filter: none; /* Ensure no global hue shift affects the cards */
 }
 
 .cardContainer:hover,
 .cardContainer:active {
     transform: scale(1.1);
-    z-index: 2; /* Bring to front when touched or hovered */
+    z-index: 1; 
 }
 
-.cardFace {
+.cardFace, .cardBack {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,31 +41,80 @@
 }
 
 /* Fire Card */
-.fire .cardFace {
-    background: linear-gradient(120deg, #ff4500, #ff8c00);
+.fire .cardContainer {
+    z-index: 5;
+}
+.fire .cardFace, .fire .cardBack {
+    background: linear-gradient(120deg, #FF0000, #FF4500); /* Pure red to orange-red gradient */
     color: #f4f1e9;
+    animation: fireHueShift 10s infinite alternate;
 }
 
 /* Water Card */
-.water .cardFace {
-    background: linear-gradient(120deg, #1e90ff, #00ced1);
+.water .cardContainer {
+    z-index: 4;
+}
+.water .cardFace, .water .cardBack {
+    background: linear-gradient(120deg, #20B2AA, #3CB371); /* Bluish-green hues */
     color: #f4f1e9;
+    animation: waterHueShift 10s infinite alternate;
 }
 
 /* Air Card */
-.air .cardFace {
-    background: linear-gradient(120deg, #f0e68c, #e6e6fa);
-    color: #663399; /* Potion Purple */
+.air .cardContainer {
+    z-index: 3;
+}
+.air .cardFace, .air .cardBack {
+    background: linear-gradient(120deg, #FFB6C1, #FFDAB9); /* Light opalescent with a touch of pink */
+    color: #4B0082;
+    animation: airHueShift 10s infinite alternate;
 }
 
 /* Earth Card */
-.earth .cardFace {
-    background: linear-gradient(120deg, #8b4513, #228b22);
+.earth .cardContainer {
+    z-index: 2;
+}
+.earth .cardFace, .earth .cardBack {
+    background: linear-gradient(120deg, #8B4513, #A0522D); /* SaddleBrown to Sienna for a brown gradient */
     color: #f4f1e9;
+    animation: earthHueShift 10s infinite alternate;
 }
 
 /* Akasha Card */
-.akasha .cardFace {
-    background: linear-gradient(120deg, #4b0082, #9400d3);
-    color: #f4f1e9;
+.akasha .cardContainer {
+    z-index: 1;
 }
+.akasha .cardFace, .akasha .cardBack {
+    background: linear-gradient(120deg, #9400D3, #8A2BE2); /* Violet hues */
+    color: #f4f1e9;
+    animation: akashaHueShift 10s infinite alternate;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    .cardContainer {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 769px) {
+    .cardContainer {
+        width: 300px;
+    }
+}
+
+@keyframes fireHueShift {
+    0%, 80%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    40% {
+        filter: hue-rotate(-15deg); /* Shift towards orange */
+    }
+}
+
