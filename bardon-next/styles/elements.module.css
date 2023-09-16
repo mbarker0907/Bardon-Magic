@@ -18,13 +18,22 @@
     margin: 20px;
     z-index: 0; 
     filter: none; /* Ensure no global hue shift affects the cards */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* A very subtle white border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
 }
 
 .cardContainer:hover,
 .cardContainer:active {
     transform: scale(1.1);
     z-index: 1; 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+
 }
+
+
 
 .cardFace, .cardBack {
     position: absolute;
@@ -35,10 +44,46 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    padding: 10px;
+    padding: 15px;
     transition: background 0.5s;
     font-weight: bold;
+    color: #333333; /* Deep gray */
 }
+
+.cardFace p, .cardBack p {
+    color: #666666 !important;
+}
+
+.cardFront h2 { 
+    font-size: 28px; /* Adjust as needed */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Cinzel', serif; /* Or any other font you choose */
+    margin-bottom: 10px; /* Adds a little space between the title and any other content you might add */
+}
+
+.cardBack p {
+    font-size: 20px; /* Adjust as needed */
+    font-weight: 400;
+    font-family: 'Merriweather', serif; /* Or any other font you choose */
+    text-align: justify; /* This will make the text more evenly spaced and easier to read */
+    margin: 0 10px; /* Adds a little padding on the sides for better text alignment */
+}
+
+.expandedCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5); /* Adjust scale as needed */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.blurredBackground {
+    filter: blur(5px);
+    pointer-events: none; /* Make sure users can't interact with blurred content */
+}
+
 
 /* Fire Card */
 .fire .cardContainer {
@@ -55,8 +100,8 @@
     z-index: 4;
 }
 .water .cardFace, .water .cardBack {
-    background: linear-gradient(120deg, #20B2AA, #3CB371); /* Bluish-green hues */
-    color: #f4f1e9;
+    background: linear-gradient(120deg, #32CD32, #3CB371); /* LimeGreen to MediumSeaGreen gradient */
+    color: #f4f1e9; /* Adjust text color if needed for better contrast */
     animation: waterHueShift 10s infinite alternate;
 }
 
@@ -65,8 +110,8 @@
     z-index: 3;
 }
 .air .cardFace, .air .cardBack {
-    background: linear-gradient(120deg, #FFB6C1, #FFDAB9); /* Light opalescent with a touch of pink */
-    color: #4B0082;
+    background: linear-gradient(120deg, #1E90FF, #00BFFF); /* DeepSkyBlue to DodgerBlue gradient */
+    color: #4B0082; /* You might want to adjust this text color for better contrast */
     animation: airHueShift 10s infinite alternate;
 }
 
@@ -75,8 +120,8 @@
     z-index: 2;
 }
 .earth .cardFace, .earth .cardBack {
-    background: linear-gradient(120deg, #8B4513, #A0522D); /* SaddleBrown to Sienna for a brown gradient */
-    color: #f4f1e9;
+    background: linear-gradient(120deg, #FFD700, #FFA500); /* Gold to Orange gradient */
+    color: #4B0082; /* Adjust text color if needed for better contrast */
     animation: earthHueShift 10s infinite alternate;
 }
 
@@ -85,8 +130,8 @@
     z-index: 1;
 }
 .akasha .cardFace, .akasha .cardBack {
-    background: linear-gradient(120deg, #9400D3, #8A2BE2); /* Violet hues */
-    color: #f4f1e9;
+    background: linear-gradient(120deg, #8B008B, #4B0082); /* Dark magenta to indigo gradient */
+    color: #f4f1e9; /* Adjust text color if needed for better contrast */
     animation: akashaHueShift 10s infinite alternate;
 }
 
@@ -114,7 +159,43 @@
         filter: hue-rotate(0deg);
     }
     40% {
-        filter: hue-rotate(-15deg); /* Shift towards orange */
+        filter: hue-rotate(-25deg); /* Shift towards orange */
+    }
+}
+
+@keyframes waterHueShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(45deg); /* Shift towards a different shade of blue */
+    }
+}
+
+@keyframes airHueShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(-30deg); /* Shift towards a lighter shade */
+    }
+}
+
+@keyframes earthHueShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(30deg); /* Shift towards a darker shade of brown */
+    }
+}
+
+@keyframes akashaHueShift {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(20deg); /* Shift towards a different shade of violet */
     }
 }
 
