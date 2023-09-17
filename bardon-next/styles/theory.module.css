@@ -1,0 +1,79 @@
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight transparency to let the gradient background show through */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--primary-bg), var(--secondary-bg), var(--primary-bg));
+    z-index: -1;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+}
+
+.title {
+    color: var(--highlight);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theorySection {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--highlight);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.theorySection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background: var(--highlight);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    z-index: -1;
+}
+
+.theorySection h2 {
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theorySection p {
+    color: var(--text-light);
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--highlight);
+    padding: 1rem 0;
+    background-color: var(--primary-bg);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}

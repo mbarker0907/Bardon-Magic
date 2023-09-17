@@ -9,12 +9,13 @@ const Navbar = () => {
         return false;
     };
 
-    const [navVisible, setNavVisible] = useState(isDefaultVisible());
+    const [navVisible, setNavVisible] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
             setNavVisible(isDefaultVisible());
         };
+        handleResize(); // Call it once initially to set the correct state
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -23,22 +24,12 @@ const Navbar = () => {
 
     return (
         <>
-            {navVisible && (
-                <button 
-                    className="hamburger" 
-                    aria-label="Close Navigation"
-                    onClick={() => setNavVisible(!navVisible)}>
-                    &#9776; {/* This is the Unicode character for the close (x) icon */}
-                </button>
-            )}
-            {!navVisible && (
-                <button 
-                    className="hamburger" 
-                    aria-label="Toggle Navigation"
-                    onClick={() => setNavVisible(!navVisible)}>
-                    &#9776; {/* This is the Unicode character for the hamburger icon */}
-                </button>
-            )}
+            <button 
+                className="hamburger" 
+                aria-label={navVisible ? "Close Navigation" : "Toggle Navigation"}
+                onClick={() => setNavVisible(!navVisible)}>
+                &#9776;
+            </button>
             {navVisible && (
                 <nav>
                     <ul>

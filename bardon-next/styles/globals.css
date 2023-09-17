@@ -1,14 +1,25 @@
 :root {
-    /* Amethyst Aura Theme */
---primary-bg: #4B0082; /* indigo */
---secondary-bg: #9400D3; /* violet */
---highlight: #D8BFD8; /* thistle */
---text-light: #E6E6FA; /* lavender */
---text-dark: #800080; /* purple */
---accent: #9932CC; /* dark orchid */
---hover-bg: rgba(153, 50, 204, 0.7); /* dark orchid hover */
---hover-text-color: #4B0082; /* indigo */
+    --primary-bg: #b71c1c; /* red darken-4 */
+    --secondary-bg: #0d47a1; /* blue darken-4 */
+    --highlight: #7cb342; /* lime darken-2 */
+    --text-light: #ffebee; /* red lighten-5 */
+    --text-dark: #b71c1c; /* red darken-4 */
+    --accent: #cddc39; /* lime */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

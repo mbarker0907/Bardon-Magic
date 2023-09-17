@@ -1,56 +1,50 @@
 .container {
-   /* Amethyst Aura Theme */
---primary-bg: #4B0082;
---secondary-bg: #9400D3;
---highlight: #D8BFD8;
---text-light: #E6E6FA;
---text-dark: #800080;
---accent: #9932CC;
---hover-bg: rgba(153, 50, 204, 0.7);
---hover-text-color: #4B0082;
     background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
-    padding: 20px;
+    padding: 40px; /* Increased padding for better spacing */
     border-radius: 10px;
-    filter: none;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+    max-width: 1200px; /* Set a max-width for better readability on larger screens */
+    margin: 0 auto; /* Center the container */
 }
 
 .heroSection {
     position: relative;
-    padding: 3rem 0;
-    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+    padding: 4rem 0; /* Increased padding for better spacing */
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem; /* Increased margin for better spacing */
 }
 
 .heroSection h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Increased font size for prominence */
+    margin-bottom: 1.5rem;
     color: var(--highlight);
     animation: fadeInUp 1.5s ease-out;
+    font-weight: bold; /* Bold for emphasis */
 }
 
 .heroSection p {
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-size: 1.4rem; /* Increased font size for readability */
+    max-width: 800px; /* Increased max-width for better line length */
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Increased margin for better spacing */
+    color: var(--text-light);
+    line-height: 1.6; /* Improved line height for readability */
 }
 
 .ctaButton {
     background-color: var(--highlight);
     color: var(--text-dark);
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increased padding for a larger click area */
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 10px 25px rgba(0, 0, 0, 0.15);
-    transform: translateY(0);
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem; /* Increased font size for prominence */
 }
 
 .ctaButton:hover {
@@ -62,26 +56,29 @@
 
 .introduction {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem; /* Increased gap for better spacing */
 }
 
 .introduction img {
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 5px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .testimonials h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* Increased margin for better spacing */
+    font-size: 2.2rem; /* Increased font size for prominence */
 }
 
 .testimonials blockquote {
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
     background-color: rgba(255, 255, 255, 0.1);
-    border-left: 3px solid var(--highlight);
+    border-left: 5px solid var(--highlight); /* Increased border for emphasis */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
+    font-size: 1.3rem; /* Increased font size for readability */
 }
 
 .testimonials blockquote:hover {
@@ -99,8 +96,9 @@
     }
 }
 
-@media (max-width: 768px) {
-    .sunImage, .moonImage {
-        display: none;
+/* Responsive Styles */
+@media (min-width: 769px) {
+    .introduction {
+        flex-direction: row;
     }
 }

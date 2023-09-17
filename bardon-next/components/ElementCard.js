@@ -1,25 +1,21 @@
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from '../styles/elements.module.css';
+import { Canvas } from 'react-three-fiber';
+import { useRef } from 'react';
+
+
+
 
 const ElementCard = ({ title, description, type }) => {
-  // State to track if the card is flipped
   const [flipped, setFlipped] = useState(false);
-
-  // State to track touch and hover events for scaling effect
   const [touching, setTouching] = useState(false);
   const [hovering, setHovering] = useState(false);
 
-  // Event handlers for mouse hover effects
   const handleMouseEnter = () => setHovering(true);
   const handleMouseLeave = () => setHovering(false);
+  const handleCardClick = () => setFlipped(!flipped);
 
-  // Event handler for card click
-  const handleCardClick = () => {
-    setFlipped(!flipped);
-  }
-
-  // Animation properties using react-spring
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
@@ -38,6 +34,7 @@ const ElementCard = ({ title, description, type }) => {
         transform: (touching || hovering) ? 'scale(1.1)' : 'scale(1)'
       }}
     >
+      
       {/* Card Front */}
       <animated.div 
         className={`${styles.cardFace} ${styles.cardFront}`}

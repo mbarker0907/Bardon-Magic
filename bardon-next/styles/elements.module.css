@@ -49,6 +49,7 @@
     font-weight: bold;
     color: #333333; /* Deep gray */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+    z-index: 1; /* Ensure card content is above the particles */
 
 }
 

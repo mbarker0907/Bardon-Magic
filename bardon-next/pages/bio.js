@@ -1,22 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/globals.css';
-import bioStyles from '../styles/bio.css';
-import Navbar from '../components/Navbar'; // Removed .js for clarity
+import bioStyles from '../styles/bio.module.css';
+import Navbar from '../components/Navbar';
 
 const Biography = () => {
     return (
-        <div>
+        <div className={bioStyles.pageWrapper}>
             <Navbar />
             
-            <div id="container">
-                <h1>Biography of Franz Bardon</h1>
+            <div className={bioStyles.container}>
+                <h1 className={bioStyles.title}>Biography of Franz Bardon</h1>
 
-                <div id="bardonImage">
+                <div className={bioStyles.bardonImage}>
                     <img src="/franz.jpeg" alt="Franz Bardon" />
                 </div>
 
-                <div id="bardonBio">
+                <div className={bioStyles.bardonBio}>
                     <p>
                         Franz Bardon (1909 – 1958) was a Czech occultist and healer best known for his three works on Hermeticism: "Initiation into Hermetics", "The Practice of Magical Evocation", and "The Key to the True Quabbalah". He is considered one of the most significant figures in the field of Hermeticism in the 20th century.
                     </p>
@@ -29,7 +29,7 @@ const Biography = () => {
                 </div>
             </div>
 
-            <footer>
+            <footer className={bioStyles.footer}>
                 <p>© 2023 Initiation into Hermetics Web App. All rights reserved.</p>
             </footer>
         </div>

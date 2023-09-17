@@ -1,0 +1,83 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-light);
+    padding: 4rem 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: linear-gradient(145deg, var(--primary-bg), var(--secondary-bg)); /* Changed background color */
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--highlight); /* Adjusted color for better contrast */
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bardonImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bardonImage img {
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.bardonImage img:hover {
+    transform: scale(1.05);
+}
+
+.bardonBio p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--text-light); /* Adjusted color for better contrast */
+    padding: 0 2rem;
+}
+
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--highlight);
+    padding: 1rem 0;
+    background-color: var(--primary-bg);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .bardonBio p {
+        font-size: 20px;
+        padding: 0 1rem;
+    }
+}
