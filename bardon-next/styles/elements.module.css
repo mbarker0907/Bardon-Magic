@@ -48,11 +48,11 @@
     transition: background 0.5s;
     font-weight: bold;
     color: #333333; /* Deep gray */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+
 }
 
-.cardFace p, .cardBack p {
-    color: #666666 !important;
-}
+
 
 .cardFront h2 { 
     font-size: 28px; /* Adjust as needed */
@@ -61,6 +61,10 @@
     letter-spacing: 1.5px;
     font-family: 'Cinzel', serif; /* Or any other font you choose */
     margin-bottom: 10px; /* Adds a little space between the title and any other content you might add */
+    background: -webkit-linear-gradient(45deg, #f9f7f5, #888888); /* Adjusted to lighter colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .cardBack p {
@@ -69,6 +73,8 @@
     font-family: 'Merriweather', serif; /* Or any other font you choose */
     text-align: justify; /* This will make the text more evenly spaced and easier to read */
     margin: 0 10px; /* Adds a little padding on the sides for better text alignment */
+    font-style: italic; /* gives a touch of elegance */
+
 }
 
 .expandedCard {
@@ -120,10 +126,11 @@
     z-index: 2;
 }
 .earth .cardFace, .earth .cardBack {
-    background: linear-gradient(120deg, #FFD700, #FFA500); /* Gold to Orange gradient */
-    color: #4B0082; /* Adjust text color if needed for better contrast */
+    background: linear-gradient(120deg, #8B4513, #A0522D); /* SaddleBrown to Sienna gradient */
+    color: #FFFFFF; /* Adjusted text color to white for better contrast with brown */
     animation: earthHueShift 10s infinite alternate;
 }
+
 
 /* Akasha Card */
 .akasha .cardContainer {
