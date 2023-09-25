@@ -1,11 +1,26 @@
 :root {
-    --primary-bg: #b71c1c; /* red darken-4 */
-    --secondary-bg: #0d47a1; /* blue darken-4 */
-    --highlight: #7cb342; /* lime darken-2 */
-    --text-light: #ffebee; /* red lighten-5 */
-    --text-dark: #b71c1c; /* red darken-4 */
-    --accent: #cddc39; /* lime */
+    --primary-bg: #0E0E0E; /* near black */
+    --secondary-bg: #353535; /* dark gray */
+    --highlight: #9C9C9C; /* slightly dark silver */
+    --text-light: #F2F2F2; /* off-white */
+    --text-dark: #575757; /* medium dark gray */
+    --accent: #C7C7C7; /* silver-ish */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
